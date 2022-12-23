@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, computed, watch } from 'vue'
 
 // Non-reactive data 
 const appTitle = 'My Ok Counter App'
@@ -31,6 +31,12 @@ const appTitle = 'My Ok Counter App'
 const counterData = reactive({
   count: 0,
   title: 'My Counter'
+})
+
+watch(() => counterData.count, (newCount) => {
+  if (newCount === 20) {
+    alert('Way to go! You made it to 20!!')
+  }
 })
 
 const increaseCounter = (amount, e) => {
