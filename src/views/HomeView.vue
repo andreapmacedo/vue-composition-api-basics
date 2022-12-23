@@ -57,7 +57,13 @@ const increaseCounter = (amount, e) => {
 const decreaseCounter = amount => {
   counterData.count -= amount
 }
+
+onMounted(() => {
+  console.log('Do stuff related to Counter')
+})
+
 </script>
+
 
 <style>
 
