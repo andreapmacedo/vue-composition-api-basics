@@ -3,14 +3,25 @@
     
     <div>
       <button class="btn">-</button>
-      <span class="counter">0</span>
+      <span class="counter">{{ counter }}</span>
       <button class="btn">+</button>
     </div>
 
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      counter: 0
+    }
+  }
+}
+</script>
+
 <style>
+
 .home {
   text-align: center;
   padding: 20px;
