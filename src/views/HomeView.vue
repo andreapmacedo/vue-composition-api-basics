@@ -21,11 +21,14 @@
 
 <script setup>
 import { reactive } from 'vue'
+
+// Non-reactive data 
 const appTitle = 'My Ok Counter App'
 
 // const counter = ref(0),
 //       counterTitle = ref('My Counter')
 
+// Reactive data
 const counterData = reactive({
   count: 0,
   title: 'My Counter'
